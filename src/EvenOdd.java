@@ -1,0 +1,21 @@
+public class EvenOdd {
+    public static void main(String[] args) {
+        int arr[] = {1, 4, 6, 3, 7, 9};
+        int result[] = new int[arr.length];
+        int left = 0;
+        int right = arr.length - 1;
+
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i] % 2 != 0) {
+                result[left] = arr[i];
+                left++;
+            } else {
+                result[right] = arr[i];
+                right--;
+            }
+        }
+        for (int i = 0; i < result.length; i++) {
+            System.out.print(result[i] + " ");
+        }
+    }
+}
